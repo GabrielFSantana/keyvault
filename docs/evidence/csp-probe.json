@@ -1,0 +1,17 @@
+{
+  "eval": "2",
+  "fn": "2",
+  "inlineStyle": "lab(2.75381 0 0)",
+  "inlineScript": false,
+  "fetch": "bloqueado:TypeError",
+  "img": "bloqueado",
+  "ws": "bloqueado",
+  "globalTauri": "undefined",
+  "violations": [
+    "script-src-elem inline",
+    "style-src-elem inline",
+    "connect-src https://example.com/",
+    "img-src https://example.com/x.png",
+    "connect-src wss://example.com/"
+  ]
+}

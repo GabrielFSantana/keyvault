@@ -1,0 +1,7 @@
+dist
+src-tauri
+node_modules
+tools/vectors/*.hex
+docs
+*.md
+package-lock.json

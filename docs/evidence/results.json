@@ -1,0 +1,340 @@
+{
+  "results": [
+    {
+      "name": "origem local do app (http://tauri.localhost)",
+      "ok": true,
+      "detail": "http://tauri.localhost/"
+    },
+    {
+      "name": "cabeçalho CSP presente no documento",
+      "ok": true,
+      "detail": "base-uri 'none'; object-src 'none'; form-action 'none'; frame-src 'none'; img-src 'self' data:; connect-src ipc: http://ipc.localhost; script-src 'self' 'self' 'sha256-ygKSexLCmVUSgCt9EenlXy/DMY+xBlqQi0/B7qCz71o='; style-src 'self'; font-src 'self'; default-src 'self'"
+    },
+    {
+      "name": "CSP contém default-src 'self'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP contém object-src 'none'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP contém base-uri 'none'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP contém frame-src 'none'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP contém form-action 'none'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP contém connect-src ipc: http://ipc.localhost",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP sem unsafe-eval/unsafe-inline em script-src",
+      "ok": true,
+      "detail": "base-uri 'none'; object-src 'none'; form-action 'none'; frame-src 'none'; img-src 'self' data:; connect-src ipc: http://ipc.localhost; script-src 'self' 'self' 'sha256-ygKSexLCmVUSgCt9EenlXy/DMY+xBlqQi0/B7qCz71o='; style-src 'self'; font-src 'self'; default-src 'self'"
+    },
+    {
+      "name": "CSP bloqueia eval (contexto da página)",
+      "ok": true,
+      "detail": "\"EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-e"
+    },
+    {
+      "name": "CSP bloqueia new Function (contexto da página)",
+      "ok": true,
+      "detail": "\"EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-e"
+    },
+    {
+      "name": "CSP bloqueia setTimeout com string",
+      "ok": true,
+      "detail": "false"
+    },
+    {
+      "name": "observação: eval via depurador CDP ignora CSP por desenho do Chromium",
+      "ok": true,
+      "detail": "callFunctionOn retornou 2"
+    },
+    {
+      "name": "CSP bloqueia script inline injetado",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSP bloqueia <style> inline injetado",
+      "ok": true,
+      "detail": "lab(2.75381 0 0)"
+    },
+    {
+      "name": "CSP bloqueia fetch remoto",
+      "ok": true,
+      "detail": "bloqueado:TypeError"
+    },
+    {
+      "name": "CSP bloqueia imagem remota",
+      "ok": true,
+      "detail": "bloqueado"
+    },
+    {
+      "name": "CSP bloqueia WebSocket remoto",
+      "ok": true,
+      "detail": "bloqueado"
+    },
+    {
+      "name": "window.__TAURI__ ausente (withGlobalTauri=false)",
+      "ok": true,
+      "detail": "undefined"
+    },
+    {
+      "name": "eventos securitypolicyviolation registrados",
+      "ok": true,
+      "detail": "script-src-elem inline | style-src-elem inline | connect-src https://example.com/ | img-src https://example.com/x.png | connect-src wss://example.com/"
+    },
+    {
+      "name": "IPC nega plugin:fs|read_file no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:fs|read_file not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:shell|execute no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:shell|execute not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:http|fetch no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:http|fetch not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:clipboard-manager|read_text no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:clipboard-manager|read_text not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:dialog|open no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:dialog|open not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:opener|open_url no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:opener|open_url not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:window|close no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:window|close not allowed by ACL"
+    },
+    {
+      "name": "IPC nega plugin:webview|internal_toggle_devtools no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command plugin:webview|internal_toggle_devtools not allowed by ACL"
+    },
+    {
+      "name": "IPC nega execute_sql no WebView2 real",
+      "ok": true,
+      "detail": "negado: Command execute_sql not allowed by ACL"
+    },
+    {
+      "name": "vault_status permitido para a janela principal",
+      "ok": true,
+      "detail": "uninitialized"
+    },
+    {
+      "name": "cofre criado e desbloqueado",
+      "ok": true,
+      "detail": "2363 ms (inclui calibração do Argon2id)"
+    },
+    {
+      "name": "backup oferecido logo após criar o cofre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "entrada salva (KDF + commit)",
+      "ok": true,
+      "detail": "1357 ms"
+    },
+    {
+      "name": "XSS armazenado é exibido como texto inerte",
+      "ok": true,
+      "detail": "{\"imgs\":0,\"scripts\":0,\"links\":0}"
+    },
+    {
+      "name": "pesquisa encontra por usuário",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pesquisa NÃO encontra pela senha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pesquisa NÃO encontra por valor secreto",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "revelar mostra a senha",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "segredo revelado não aparece em atributos",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "título da janela não contém segredos",
+      "ok": true,
+      "detail": "KeyVault"
+    },
+    {
+      "name": "revelação expira em 15 s",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cópia coloca a senha no clipboard",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "clipboard marcado para exclusão do histórico/nuvem",
+      "ok": true,
+      "detail": "ExcludeClipboardContentFromMonitorProcessing,CanIncludeInClipboardHistory,CanUploadToCloudClipboard,System.String,UnicodeText,Text,Locale,OEMText"
+    },
+    {
+      "name": "clipboard limpo após 20 s",
+      "ok": true,
+      "detail": "<<vazio>>"
+    },
+    {
+      "name": "conteúdo novo do usuário preservado",
+      "ok": true,
+      "detail": "texto novo do usuario e2e"
+    },
+    {
+      "name": "gerador produz 24 caracteres",
+      "ok": true,
+      "detail": "24"
+    },
+    {
+      "name": "bloqueio manual remove o conteúdo da tela",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "senha errada: mensagem genérica",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "desbloqueio com senha correta",
+      "ok": true,
+      "detail": "1345 ms"
+    },
+    {
+      "name": "backup gravado com magic KVLT e envelope_kind=2",
+      "ok": true,
+      "detail": "652 bytes"
+    },
+    {
+      "name": "diálogo nativo preenchido",
+      "ok": true,
+      "detail": "44444"
+    },
+    {
+      "name": "troca de senha concluída",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "senha antiga não abre o cofre após troca",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "senha nova abre o cofre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "backup NÃO abre com a senha nova (feito com a antiga)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "backup autenticado com a senha da época",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "confirmação da restauração exibida",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "aviso indica o cofre restaurado selecionado",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dois cofres disponíveis após restauração",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "cofre restaurado abre com a senha nova e contém a entrada",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "desbloqueio para teste de inatividade",
+      "ok": true,
+      "detail": "vault-6d249fc0bddc4b7e712d85a53b512e14"
+    },
+    {
+      "name": "bloqueio por inatividade (1 min) no backend",
+      "ok": true,
+      "detail": "60 s após a última interação"
+    },
+    {
+      "name": "axe-core WCAG 2 A/AA sem violações: tela-de-bloqueio",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navegação por Tab percorre controles com foco visível",
+      "ok": true,
+      "detail": "BUTTON:Mostrar senha digitada:none | BUTTON:Restaurar backup .ke:none | BODY:\n     KeyVault bloqu:none | INPUT::solid | INPUT::none | BUTTON:Mostrar senha digitada:none | BUTTON:Restaurar backup .ke:none | INPUT::solid"
+    },
+    {
+      "name": "axe-core WCAG 2 A/AA sem violações: cofre-detalhe",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "atalho Ctrl+L bloqueia",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nenhum armazenamento do navegador em uso",
+      "ok": true,
+      "detail": "{\"local\":0,\"session\":0,\"idb\":0,\"caches\":0,\"sw\":0,\"cookies\":0}"
+    }
+  ],
+  "violations": []
+}

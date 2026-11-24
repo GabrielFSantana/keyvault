@@ -1,0 +1,1 @@
+base-uri 'none'; object-src 'none'; form-action 'none'; frame-src 'none'; img-src 'self' data:; connect-src ipc: http://ipc.localhost; script-src 'self' 'self' 'sha256-ygKSexLCmVUSgCt9EenlXy/DMY+xBlqQi0/B7qCz71o='; style-src 'self'; font-src 'self'; default-src 'self'

@@ -1,0 +1,28 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "Única capability: janela local principal. Somente comandos próprios do KeyVault e escuta de eventos. Sem origens remotas, sem plugins de shell/http/fs/clipboard/updater/dialog no frontend.",
+  "local": true,
+  "windows": ["main"],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "allow-vault-status",
+    "allow-vault-create",
+    "allow-vault-unlock",
+    "allow-vault-lock",
+    "allow-entries-list",
+    "allow-entry-get",
+    "allow-entry-save",
+    "allow-entry-delete",
+    "allow-entries-search",
+    "allow-password-generate",
+    "allow-entry-reveal-secret",
+    "allow-entry-copy-secret",
+    "allow-vault-change-password",
+    "allow-backup-export",
+    "allow-backup-restore",
+    "allow-session-activity",
+    "allow-vault-settings-update"
+  ]
+}

@@ -1,0 +1,38 @@
+[package]
+name = "keyvault-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+publish = false
+description = "Dominio, criptografia, formato e persistencia do KeyVault (independente de Tauri)"
+
+[features]
+default = []
+# Instrumentacao de uso de chaves/nonces. SOMENTE para testes com dados ficticios.
+test-instrumentation = []
+
+[dependencies]
+argon2 = { version = "=0.6.0", default-features = false, features = ["alloc", "zeroize"] }
+aes-gcm = { version = "=0.11.1", default-features = false, features = ["aes", "alloc", "zeroize"] }
+sha2 = "=0.11.1"
+getrandom = "=0.4.3"
+zeroize = { version = "=1.9.2", features = ["derive"] }
+subtle = "=2.6.1"
+rusqlite = { version = "=0.43.0", features = ["bundled"] }
+thiserror = "=2.0.21"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "=0.61.2", features = [
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_Security_Authorization",
+  "Win32_Storage_FileSystem",
+  "Win32_System_Threading",
+] }
+
+[dev-dependencies]
+keyvault-core = { path = ".", features = ["test-instrumentation"] }
+proptest = "=1.12.0"
+tempfile = "=3.27.0"
+hex = "=0.4.3"

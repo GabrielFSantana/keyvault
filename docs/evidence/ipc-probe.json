@@ -1,0 +1,12 @@
+{
+  "plugin:fs|read_file": "negado: Command plugin:fs|read_file not allowed by ACL",
+  "plugin:shell|execute": "negado: Command plugin:shell|execute not allowed by ACL",
+  "plugin:http|fetch": "negado: Command plugin:http|fetch not allowed by ACL",
+  "plugin:clipboard-manager|read_text": "negado: Command plugin:clipboard-manager|read_text not allowed by ACL",
+  "plugin:dialog|open": "negado: Command plugin:dialog|open not allowed by ACL",
+  "plugin:opener|open_url": "negado: Command plugin:opener|open_url not allowed by ACL",
+  "plugin:window|close": "negado: Command plugin:window|close not allowed by ACL",
+  "plugin:webview|internal_toggle_devtools": "negado: Command plugin:webview|internal_toggle_devtools not allowed by ACL",
+  "execute_sql": "negado: Command execute_sql not allowed by ACL",
+  "status": "uninitialized"
+}

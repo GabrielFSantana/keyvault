@@ -1,0 +1,64 @@
+[package]
+name = "keyvault"
+version = "0.1.0"
+description = "KeyVault — gerenciador de senhas desktop local"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+publish = false
+
+[lib]
+name = "keyvault_lib"
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.7.6", features = [] }
+
+[dependencies]
+keyvault-core = { path = "core" }
+tauri = { version = "=2.12.7", features = [] }
+tauri-plugin-single-instance = "=2.5.5"
+rfd = { version = "=0.18.0", default-features = false, features = ["common-controls-v6"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+zeroize = { version = "=1.9.2", features = ["derive"] }
+
+[target.'cfg(windows)'.dependencies]
+webview2-com = "=0.39.1"
+windows-core = "=0.62.2"
+windows-sys = { version = "=0.61.2", features = [
+  "Win32_Foundation",
+  "Win32_System_DataExchange",
+  "Win32_System_Memory",
+  "Win32_System_Ole",
+  "Win32_System_Power",
+  "Win32_System_RemoteDesktop",
+  "Win32_System_LibraryLoader",
+  "Win32_System_Shutdown",
+  "Win32_UI_WindowsAndMessaging",
+  "Win32_Graphics_Gdi",
+] }
+
+[dev-dependencies]
+tauri = { version = "=2.12.7", features = ["test"] }
+tempfile = "=3.27.0"
+
+[features]
+# Necessário para o build de produção do Tauri (assets embutidos).
+custom-protocol = ["tauri/custom-protocol"]
+
+[workspace]
+resolver = "3"
+members = [".", "core"]
+
+# Dependências (Argon2/AES/SHA) otimizadas mesmo em builds de teste/debug, para que a KDF
+# rode com os parâmetros reais (64 MiB+, t=3) sem relaxar nada.
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = "debuginfo"
