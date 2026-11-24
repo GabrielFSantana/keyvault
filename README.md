@@ -11,6 +11,20 @@ especificação [KEYVAULT.md](KEYVAULT.md) (versão 1.0). Primeira plataforma ho
 Stack: Tauri 2.12 · Rust 1.100 · React 19 · TypeScript 6 (strict) · Vite 8 · Tailwind CSS 4 · shadcn/ui ·
 SQLite (rusqlite/bundled) · Argon2id + AES-256-GCM (RustCrypto).
 
+![Cofre desbloqueado: lista de entradas e detalhe com segredos mascarados](docs/screenshots/03-cofre-detalhe.png)
+
+## Telas
+
+Capturas do app instalado (build de produção) com dados **fictícios**, geradas por
+`e2e/run-screenshots.ps1`.
+
+| | |
+| :---: | :---: |
+| ![Criação do cofre com senha mestra](docs/screenshots/01-criar-cofre.png)<br>**Primeiro uso** — senha mestra de 15+ caracteres e aviso de perda irreversível | ![Oferta de backup após criar o cofre](docs/screenshots/02-oferta-de-backup.png)<br>**Backup oferecido** logo após a criação |
+| ![Segredo revelado temporariamente](docs/screenshots/04-segredo-revelado.png)<br>**Revelação temporária** (até 15 s; remascara ao perder o foco) | ![Pesquisa por tag](docs/screenshots/05-pesquisa.png)<br>**Pesquisa** em título, URL, usuário, tags e notas (nunca em segredos) |
+| ![Editor com gerador de senhas](docs/screenshots/06-editor-e-gerador.png)<br>**Editor** com gerador seguro no Rust (16–128 caracteres) | ![Configurações e segurança](docs/screenshots/07-configuracoes.png)<br>**Configurações**: bloqueio, clipboard, backup e troca de senha |
+| ![Tela de bloqueio](docs/screenshots/08-bloqueado.png)<br>**Bloqueado** — manual, inatividade, foco, sessão/suspensão do Windows | ![Restauração de backup](docs/screenshots/09-restaurar-backup.png)<br>**Restauração** sempre como cofre novo e independente |
+
 ## Documentação
 
 - [docs/format.md](docs/format.md) — formato binário do envelope, AAD, limites e vetores de integração
